@@ -5,7 +5,8 @@ IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
     {
         string connstr = hostContext.Configuration.GetValue<string>("ConnStr");
-        services.AddHostedService(sp => new VelocityWorker(connstr));
+        int interval = hostContext.Configuration.GetValue<int>("TimeIntervalSeconds");
+        services.AddHostedService(sp => new VelocityWorker(connstr, interval));
     })
     .Build();
 
