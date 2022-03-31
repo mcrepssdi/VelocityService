@@ -1,5 +1,5 @@
-using VelocityService;
 using VelocityService.Services;
+
 
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
