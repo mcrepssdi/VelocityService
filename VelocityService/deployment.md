@@ -2,7 +2,7 @@
 # CORE 6 SERVICE DEPLOYMENT
 
 ## Creates a new Service
-    sc.exe create "EET4250Service" binpath="C:\Program Files\dotnet.exe C:\Users\eecsm\OneDrive\Documents\Deployments\EET4250Service\VelocityService.dll"
+    sc.exe create "EET4250Service" binpath="C:\Program Files\dotnet.exe C:\Users\eecsm\Deployments\VelocityService.dll"
 
 ## Provide a Description for a Service
     sc.exe description EET4250Service "Service to Add Beer Pong Ball Data"
@@ -15,3 +15,4 @@
 
 ## Restart a Service
     sc.exe restart EET4250Service
+
